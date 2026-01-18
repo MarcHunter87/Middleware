@@ -7,7 +7,7 @@ use App\Models\User;
 
 Route::get('/', function () {
     return view('login');
-});
+})->name('login'); // asigna el nombre 'login' a la ruta para que el middleware('auth') pueda redirigir a esta ruta cuando un usuario no autenticado intente acceder a un sitio que requiere autenticación
 
 Route::get('/register', function () {
     return view('register');
