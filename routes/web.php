@@ -38,7 +38,7 @@ Route::post('/login', function () {
         'password' => $password,
     ];
     
-    if (Auth::attempt($credentials)) { // del propio Laravel para comprobar que los datos de user son correctos comparandolos con la base de datos /vendor/laravel/framework/src/Illuminate/Auth/Authenticatable.php
+    if (Auth::attempt($credentials)) { // del propio Laravel para comprobar que los datos de user son correctos comparandolos con la base de datos
         return redirect('/home');
     }
     
@@ -47,7 +47,7 @@ Route::post('/login', function () {
 
 Route::get('/home', function () {
     return view('home');
-})->middleware('auth'); // middleware del propio Laravel para verificar si el usuario está autenticado /laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php
+})->middleware('auth'); // middleware del propio Laravel para verificar si el usuario está autenticado
 
 Route::get('/logout', function () {
     Auth::logout();

@@ -8,7 +8,7 @@
 <body>
     <h1>Login</h1>
     <form method="POST" action="/login">
-        <!-- genera un token para evitar que el middleware VerifyCsrfToken que hay por defecto en el post cause un error /vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php -->
+        <!-- genera un token de seguridad para evitar que el middleware VerifyCsrfToken que hay por defecto en el post bloquee la petición /vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php -->
         @csrf
         <div>
             <label>Email:</label>
